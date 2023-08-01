@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getContinents } from './redux/continents/continentsSlice';
 import { getCountries } from './redux/countries/countriesSlice';
-import Countries from './compopnents/Countries';
+import Countries from './components/Countries';
 import Home from './routes/Home';
-import CountriesDetails from './compopnents/CountriesDetail';
+import CountriesDetails from './components/CountriesDetail';
 
 function App() {
   const dispatch = useDispatch();

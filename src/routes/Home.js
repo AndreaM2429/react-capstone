@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { BsEmojiSmileUpsideDown } from 'react-icons/bs';
-import Continents from '../compopnents/Continents';
+import Continents from '../components/Continents';
 
 function Home() {
   const { loading, continentFail } = useSelector((state) => state.continents);
