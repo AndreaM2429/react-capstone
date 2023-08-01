@@ -1,5 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import NorthAmerica from '../../assets/North America.png';
+import asia from '../../assets/Asia.png';
+import europe from '../../assets/Europe.png';
+import southAmerica from '../../assets/South America.png';
+import AustraliaOceania from '../../assets/Australia-oceania.png';
+import africa from '../../assets/Africa.png';
 
 const initialState = {
   continents: [],
@@ -17,6 +23,15 @@ export const getContinents = createAsyncThunk('get/continents', async (thunkAPI)
     return thunkAPI.rejectWithValue(error);
   }
 });
+
+export const images = {
+  'North America': NorthAmerica,
+  Asia: asia,
+  Europe: europe,
+  'South America': southAmerica,
+  'Australia-Oceania': AustraliaOceania,
+  Africa: africa,
+};
 
 const continentsSlice = createSlice({
   name: 'continents',
