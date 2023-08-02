@@ -1,0 +1,22 @@
+.country-details {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.country-details img {
+  width: 200px;
+}
+.country-details h2 {
+  width: 30%;
+}
+
+.details li {
+  height: 70px;
+  color: #F4F7FA;
+  align-items: center;
+}
+
+.details span {
+  margin-left: 15px;
+  font-size: 24px;
+}

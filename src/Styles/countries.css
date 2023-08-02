@@ -1,0 +1,55 @@
+.continent img {
+  width: 40%;
+  height: 140px;
+}
+
+.continent h2 {
+  width: 40%;
+}
+
+.countries-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.countries-container ul,
+.countries-container li {
+  width: 100%;
+}
+
+.countries-container li {
+  height: 130px;
+}
+
+.countries-container li:nth-child(2n+2) {
+  background-color: #4063A5;
+}
+
+.countries-container li:nth-child(2n+1) {
+  background-color: #5586E3;
+}
+
+.country {
+  justify-content: space-between;
+}
+
+.country-data {
+  align-items: normal;
+  gap: 5px;
+  width: 50%;
+}
+
+.country img {
+  width: 30%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.country-data div {
+  gap: 5px;
+  width: 80%;
+}
+
+.country div h2 {
+  margin: 0;
+}
