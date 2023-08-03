@@ -7,7 +7,7 @@ import { PiHandHeartDuotone } from 'react-icons/pi';
 import { GiDeathJuice } from 'react-icons/gi';
 import Header from './Header';
 
-const style = { color: 'white', fontSize: '18px', marginLeft: '15px' };
+const style = { color: 'white', width: '100%', height: '100%' };
 
 function CountriesDetails() {
   const urldata = useParams();
@@ -19,7 +19,7 @@ function CountriesDetails() {
     <>
       <Header path={`/${countryData[0].continent}`} title="Rates of Covid-19 Disease" />
       <section>
-        <div className="d-flex continent country-details">
+        <div className="d-flex country-details continent">
           <img src={countryData[0].img} alt={countryData[0].name} loading="lazy" />
           <h2>{countryName}</h2>
         </div>
@@ -29,20 +29,20 @@ function CountriesDetails() {
         <div>
           <ul className="d-flex-colum countries-container details">
             <li className="d-flex">
-              <FaPeopleGroup style={style} />
-              <span>{`Population: ${countryData[0].population}`}</span>
+              <span className="detail-icon d-flex"><FaPeopleGroup style={style} /></span>
+              <span className="country-numbers">{`Population: ${countryData[0].population}`}</span>
             </li>
             <li className="d-flex">
-              <FaClipboardList style={style} />
-              <span>{`Total cases: ${countryData[0].cases}`}</span>
+              <span className="detail-icon d-flex"><FaClipboardList style={style} /></span>
+              <span className="country-numbers">{`Total cases: ${countryData[0].cases}`}</span>
             </li>
             <li className="d-flex">
-              <PiHandHeartDuotone style={style} />
-              <span>{`Total people recovered: ${countryData[0].recovered}`}</span>
+              <span className="detail-icon d-flex"><PiHandHeartDuotone style={style} /></span>
+              <span className="country-numbers">{`Total people recovered: ${countryData[0].recovered}`}</span>
             </li>
             <li className="d-flex">
-              <GiDeathJuice style={style} />
-              <span>{`Total deaths: ${countryData[0].deaths}`}</span>
+              <span className="detail-icon d-flex"><GiDeathJuice style={style} /></span>
+              <span className="country-numbers">{`Total deaths: ${countryData[0].deaths}`}</span>
             </li>
           </ul>
         </div>
