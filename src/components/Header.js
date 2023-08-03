@@ -5,7 +5,7 @@ import { IoIosSettings } from 'react-icons/io';
 import { IoChevronBackSharp } from 'react-icons/io5';
 import { NavLink } from 'react-router-dom';
 
-export const style = { color: 'white', fontSize: '18px' };
+export const style = { color: 'white', width: '100%', height: '100%' };
 
 function Header({ path, title }) {
   return (
@@ -13,8 +13,8 @@ function Header({ path, title }) {
       <span className="icons"><NavLink to={path}><IoChevronBackSharp style={style} /></NavLink></span>
       <h1>{title}</h1>
       <ul className="d-flex">
-        <li><BiMicrophone style={style} /></li>
-        <li><IoIosSettings style={style} /></li>
+        <li className="icons"><BiMicrophone style={style} /></li>
+        <li className="icons"><IoIosSettings style={style} /></li>
       </ul>
     </header>
   );
