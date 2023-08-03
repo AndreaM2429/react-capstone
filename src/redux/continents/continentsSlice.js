@@ -6,6 +6,7 @@ import europe from '../../assets/Europe.png';
 import southAmerica from '../../assets/South America.png';
 import AustraliaOceania from '../../assets/Australia-oceania.png';
 import africa from '../../assets/Africa.png';
+import { numberFormat } from '../../assets/helpers/numberFormat';
 
 const initialState = {
   continents: [],
@@ -47,7 +48,7 @@ const continentsSlice = createSlice({
         state.continents = continentArr.map((continents) => ({
           id: continents.continent,
           name: continents.continent,
-          casesNumber: continents.cases,
+          casesNumber: numberFormat(continents.cases),
         }));
       })
       .addCase(getContinents.rejected, (state) => {

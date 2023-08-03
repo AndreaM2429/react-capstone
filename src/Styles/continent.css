@@ -28,6 +28,27 @@
   height: 140px;
 }
 
+.search-container {
+  width: 100%;
+  justify-content: center;
+  background-color: #5586e3;
+}
+
+#country {
+  width: 60%;
+  height: 20px;
+  border: 3px solid #fff;
+  border-radius: 16px;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: transparent;
+}
+
+#country::placeholder {
+  color: #f4f7fa;
+  font-size: 15px;
+}
+
 @media (min-width: 768px) {
   .continet-container h3 {
     font-size: 27px;
