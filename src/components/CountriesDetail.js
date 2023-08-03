@@ -1,15 +1,18 @@
 import '../Styles/details.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { FaPeopleGroup } from 'react-icons/fa6';
 import { FaClipboardList } from 'react-icons/fa';
 import { PiHandHeartDuotone } from 'react-icons/pi';
 import { GiDeathJuice } from 'react-icons/gi';
 import Header from './Header';
+import { cleanCountry } from '../redux/countries/countriesSlice';
 
 const style = { color: 'white', width: '100%', height: '100%' };
 
 function CountriesDetails() {
+  const dispatch = useDispatch();
+  dispatch(cleanCountry(''));
   const urldata = useParams();
   const countryName = urldata.country;
   const { countries } = useSelector((state) => state.countries);
