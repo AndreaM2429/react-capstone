@@ -21,7 +21,7 @@ function Continents() {
     return (
       <>
         <Header path="/" title="Global Rates of Covid-19 Disease" />
-        <div className="d-flex">
+        <div className="d-flex search-container">
           <input type="text" id="country" name="country" placeholder="Country Name" onChange={searchCountry} />
         </div>
         <ul className="continet-container">
