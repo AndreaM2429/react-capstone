@@ -13,12 +13,12 @@ function Continents() {
       <ul className="continet-container">
         {continents.map((continent) => (
           <li key={continent.id}>
-            <NavLink to={`/${continent.name}`}>
-              <BsBoxArrowUpRight style={style} />
-              <img src={images[continent.name]} alt={continent.name} loading="lazy" />
+            <NavLink to={`/${continent.name}`} className="d-flex-colum">
+              <span className="icons d-flex continent-icon"><BsBoxArrowUpRight style={style} /></span>
+              <div className="d-flex img-container"><img src={images[continent.name]} alt={continent.name} loading="lazy" /></div>
               <div>
                 <h3>{continent.name}</h3>
-                <span>
+                <span className="cases-span">
                   {`Total cases: ${continent.casesNumber}`}
                 </span>
               </div>
