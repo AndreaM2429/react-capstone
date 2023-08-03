@@ -48,11 +48,11 @@ function Countries() {
                 <div className="d-flex country-data">
                   <div className="d-flex-colum">
                     <h2>{country.name}</h2>
-                    <span>
+                    <span className="cases-span">
                       {`Total Cases: ${country.cases}`}
                     </span>
                   </div>
-                  <BiRightArrowCircle style={style} />
+                  <span className="country-icon d-flex"><BiRightArrowCircle style={style} /></span>
                 </div>
               </NavLink>
             </li>
