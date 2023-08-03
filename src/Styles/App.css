@@ -16,23 +16,60 @@ ul {
 
 a {
   text-decoration: none;
-  color: #F4F7FA;
+  color: #f4f7fa;
 }
 
 .continent {
   width: 100%;
   justify-content: space-evenly;
-  background-color: #5586E3;
+  background-color: #5586e3;
   padding: 16px 0;
 }
 
 .message {
   width: 100%;
-  background-color: #2E4877;
+  background-color: #2e4877;
   height: 26px;
-  color: #F4F7FA;
+  color: #f4f7fa;
 }
 
 .message span {
-  padding-left: 25px;
+  padding-left: 10px;
+}
+
+.icons {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+.country-icon {
+  width: 23px;
+  height: 23px;
+  margin-right: 7px;
+}
+
+.detail-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .icons,
+  .country-icon,
+  .detail-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .continent-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .message {
+    font-size: 20px;
+    height: 35px;
+  }
 }
