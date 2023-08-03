@@ -1,8 +1,11 @@
+import '../Styles/countries.css';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { BsEmojiSmileUpsideDown } from 'react-icons/bs';
-import Header from './Header';
+import { BiRightArrowCircle } from 'react-icons/bi';
+import Header, { style } from './Header';
+import { images } from '../redux/continents/continentsSlice';
 
 function Countries() {
   const urldata = useParams();
@@ -25,23 +28,38 @@ function Countries() {
   }
 
   return (
-    <section>
-      <Header path="/" title="Countries Rates of Covid-19 Disease" />
-      {continentCountries.map((country) => (
-        <NavLink key={country.name} to={country.name}>
-          <div>
-            <img src={country.img} alt={country.name} />
-            <ul>
-              <li><h2>{country.name}</h2></li>
-              <li>
-                Total cases:
-                {country.cases}
-              </li>
-            </ul>
-          </div>
-        </NavLink>
-      ))}
-    </section>
+    <>
+      <Header path="/" title="Rates of Covid-19 Disease" />
+      <div className="d-flex continent">
+        <img src={images[continentName]} alt={continentName} loading="lazy" />
+        <h2>
+          {`${continentName} Countries`}
+        </h2>
+      </div>
+      <div className="message d-flex">
+        <span>Countries By Continent</span>
+      </div>
+      <section>
+        <ul className="d-flex-colum countries-container">
+          {continentCountries.map((country) => (
+            <li className="d-flex" key={country.name}>
+              <NavLink className="d-flex country" to={country.name}>
+                <img src={country.img} alt={country.name} loading="lazy" />
+                <div className="d-flex country-data">
+                  <div className="d-flex-colum">
+                    <h2>{country.name}</h2>
+                    <span className="cases-span">
+                      {`Total Cases: ${country.cases}`}
+                    </span>
+                  </div>
+                  <span className="country-icon d-flex"><BiRightArrowCircle style={style} /></span>
+                </div>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
   );
 }
 

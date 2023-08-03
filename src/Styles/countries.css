@@ -1,0 +1,95 @@
+.continent img {
+  width: 40%;
+  height: 140px;
+}
+
+.continent h2 {
+  width: 40%;
+  color: #f4f7fa;
+}
+
+.countries-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.countries-container ul,
+.countries-container li {
+  width: 100%;
+}
+
+.countries-container li {
+  height: 130px;
+}
+
+.countries-container li:nth-child(2n+2) {
+  background-color: #4063a5;
+}
+
+.countries-container li:nth-child(2n+1) {
+  background-color: #5586e3;
+}
+
+.countries-container li a {
+  width: 100%;
+}
+
+.country {
+  justify-content: space-between;
+}
+
+.country img {
+  width: 30%;
+  max-height: 110px;
+  margin-left: 10px;
+}
+
+.country-data {
+  align-items: normal;
+  gap: 5px;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.country-data div {
+  gap: 5px;
+  width: 80%;
+}
+
+.country div h2 {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .continent img {
+    width: 350px;
+    height: 170px;
+  }
+
+  .country-data div h2 {
+    font-size: 26px;
+  }
+
+  .country-details img {
+    width: 270px;
+    height: 170px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .countries-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    background-color: #5586e3;
+  }
+
+  .countries-container li:nth-child(2n+2),
+  .countries-container li:nth-child(2n+1) {
+    background-color: transparent;
+  }
+
+  .countries-container li:nth-child(4n + 2),
+  .countries-container li:nth-child(4n + 3) {
+    background-color: #4063a5;
+  }
+}

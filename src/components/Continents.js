@@ -1,6 +1,8 @@
+import '../Styles/continent.css';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Header from './Header';
+import { BsBoxArrowUpRight } from 'react-icons/bs';
+import Header, { style } from './Header';
 import { images } from '../redux/continents/continentsSlice';
 
 function Continents() {
@@ -8,20 +10,22 @@ function Continents() {
   return (
     <>
       <Header path="/" title="Global Rates of Covid-19 Disease" />
-      <div>
+      <ul className="continet-container">
         {continents.map((continent) => (
-          <NavLink key={continent.id} to={`/${continent.name}`}>
-            <img src={images[continent.name]} alt={continent.name} />
-            <div>
-              <h3>{continent.name}</h3>
-              <span>
-                Total cases:
-                {continent.casesNumber}
-              </span>
-            </div>
-          </NavLink>
+          <li key={continent.id}>
+            <NavLink to={`/${continent.name}`} className="d-flex-colum">
+              <span className="icons d-flex continent-icon"><BsBoxArrowUpRight style={style} /></span>
+              <div className="d-flex img-container"><img src={images[continent.name]} alt={continent.name} loading="lazy" /></div>
+              <div>
+                <h3>{continent.name}</h3>
+                <span className="cases-span">
+                  {`Total cases: ${continent.casesNumber}`}
+                </span>
+              </div>
+            </NavLink>
+          </li>
         ))}
-      </div>
+      </ul>
 
     </>
   );

@@ -1,39 +1,75 @@
-.App {
-  text-align: center;
+.d-flex {
+  display: flex;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.d-flex-colum {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a {
+  text-decoration: none;
+  color: #f4f7fa;
+}
+
+.continent {
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: #5586e3;
+  padding: 16px 0;
+}
+
+.message {
+  width: 100%;
+  background-color: #2e4877;
+  height: 26px;
+  color: #f4f7fa;
+}
+
+.message span {
+  padding-left: 10px;
+}
+
+.icons {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+.country-icon {
+  width: 23px;
+  height: 23px;
+  margin-right: 7px;
+}
+
+.detail-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .icons,
+  .country-icon,
+  .detail-icon {
+    width: 30px;
+    height: 30px;
   }
 
-  to {
-    transform: rotate(360deg);
+  .continent-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .message {
+    font-size: 20px;
+    height: 35px;
   }
 }
