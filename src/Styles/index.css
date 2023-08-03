@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 body {
   background-color: #4369b2;
   margin: 0;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+h3,
+.cases-span,
+.continent h2,
+.country-numbers,
+.country div h2 {
+  font-family: 'Lato', sans-serif;
 }
