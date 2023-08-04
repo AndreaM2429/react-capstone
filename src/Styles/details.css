@@ -1,0 +1,44 @@
+.country-details {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.country-details img {
+  width: 200px;
+}
+
+.country-details h2 {
+  width: 30%;
+}
+
+.details li {
+  height: 70px;
+  color: #f4f7fa;
+}
+
+.country-numbers {
+  margin-left: 15px;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .country-details img {
+    width: 270px;
+    height: 170px;
+  }
+
+  .country-details h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .details {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .details li {
+    height: 100px;
+  }
+}
