@@ -109,7 +109,7 @@ The app has 3 pages:
 
 ## 📹 Video presentation <a name="video">
 
-[Video](https://youtu.be/waEoUrueDPY)
+[Video](https://youtu.be/7ly1jqwjF8U)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
